@@ -1,0 +1,14 @@
+.homepage_custom_bg::before {
+  content: "";
+  width: 110%;
+  height: 1000px;
+  position: absolute;
+  top: -100px;
+  right: 40%;
+  transform: skew(337deg, 0deg) rotate(350deg);
+  z-index: -1;
+  border-radius: 2rem;
+  background: radial-gradient(circle, #639aff 0%, #6366f1 100%);
+  background-size: 100%;
+  background-position: 650px bottom;
+}
