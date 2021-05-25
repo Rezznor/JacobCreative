@@ -7,6 +7,7 @@ export default function DashboardPost({ art, handleDelete }) {
                 <Link href={`/blog/${art.slug}`}>
                     <a>{art.title}</a>
                 </Link>
+                <p>{art.description}</p>
             </h4>
 
             <Link href={`/blog/edit/${art.id}`}>

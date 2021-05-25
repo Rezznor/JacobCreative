@@ -22,6 +22,7 @@ export default function ArticlePage({ art }) {
                             {new Date(art.published_at).toLocaleDateString('en-US')}
                         </span>
                         <h1>{art.title}</h1>
+                        <p>Written by: {art.user.username}</p>
 
                         <ToastContainer />
                         

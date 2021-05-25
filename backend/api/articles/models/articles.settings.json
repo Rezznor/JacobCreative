@@ -2,8 +2,7 @@
   "kind": "collectionType",
   "collectionName": "articles",
   "info": {
-    "name": "Articles",
-    "description": ""
+    "name": "articles"
   },
   "options": {
     "increments": true,
@@ -15,15 +14,18 @@
     "title": {
       "type": "string"
     },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
     "description": {
-      "type": "text"
+      "type": "string"
     },
     "body": {
       "type": "richtext"
     },
-    "user": {
-      "plugin": "users-permissions",
-      "model": "user"
+    "date": {
+      "type": "datetime"
     },
     "image": {
       "model": "file",
@@ -37,9 +39,10 @@
       "required": false,
       "pluginOptions": {}
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "title"
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "articles"
     }
   }
 }

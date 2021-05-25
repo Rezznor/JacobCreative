@@ -14,8 +14,8 @@ export default function DashboardPage({ articles, token }) {
             const res = await fetch(`${API_URL}/articles/${id}`, {
                 method: 'DELETE',
                 headers: {
-                    Authorization: `Bearer ${token}`
-                }
+                    Authorization: `Bearer ${token}`,
+                },
             })
 
             const data = await res.json()
@@ -29,18 +29,25 @@ export default function DashboardPage({ articles, token }) {
     }
     
     return (
+
         <Layout title='User Dashboard'>
             <div>
-                <h1>Dashboard</h1>
-                <h3>My Posts</h3>
+                <div className='container'>
 
-                {console.log(articles)}
-                {articles.map((art) => (
-                    <DashboardPost key={art.id} art={art} handleDelete={deletePost} />
-                ))}
-                
-            </div>
+                    <div>
+                        <h1>Dashboard</h1>
+                        <h3>My Posts</h3>
+                        
+                        {articles.map((art) => (
+                            <DashboardPost key={art.id} art={art} handleDelete={deletePost} />
+                        ))}
+
+                    </div>
+
+               </div>
+           </div>
         </Layout>
+
     )
 }
 
