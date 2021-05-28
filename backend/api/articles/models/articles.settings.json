@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "articles",
   "info": {
-    "name": "articles"
+    "name": "articles",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -23,9 +24,6 @@
     },
     "body": {
       "type": "richtext"
-    },
-    "date": {
-      "type": "datetime"
     },
     "image": {
       "model": "file",

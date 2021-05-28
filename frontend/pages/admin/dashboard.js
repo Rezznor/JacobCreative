@@ -4,10 +4,12 @@ import DashboardPost from '@/components/DashboardPost'
 import {API_URL} from '@/config/index'
 import {useRouter} from 'next/router'
 import { toast } from 'react-toastify'
+import {useAuth} from '@/context/AuthContext'
 
 export default function DashboardPage({ articles, token }) {
     
     const router = useRouter()
+    const {user} = useAuth()
 
     const deletePost = async (id) => {
         if(confirm('Are you sure?')) {
@@ -30,9 +32,11 @@ export default function DashboardPage({ articles, token }) {
     
     return (
 
-        <Layout title='User Dashboard'>
+        <Layout title={user ? user.username + `'s Dashboard` : 'Admin' + `'s Dashboard`}>
             <div>
                 <div className='container'>
+
+                {console.log(articles)}
 
                     <div>
                         <h1>Dashboard</h1>

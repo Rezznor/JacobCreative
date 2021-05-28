@@ -1,4 +1,4 @@
-import {createContext, useState, useEffect} from 'react'
+import {createContext, useContext, useState, useEffect} from 'react'
 import {useRouter} from 'next/router'
 import {NEXT_URL} from '@/config/index'
 
@@ -72,3 +72,4 @@ export const AuthProvider = ({children}) => {
 }
 
 export default AuthContext
+export const useAuth = () => useContext(AuthContext)

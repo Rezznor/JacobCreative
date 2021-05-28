@@ -10,6 +10,7 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.4.0",
     "cookie": "^0.4.1",
+    "marked": "^2.0.5",
     "moment": "^2.29.1",
     "next": "10.2.0",
     "qs": "^6.10.1",
