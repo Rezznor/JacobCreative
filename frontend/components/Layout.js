@@ -1,34 +1,30 @@
-import Head from 'next/head'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import {useRouter} from 'next/router'
+import Head from 'next/head';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import { useRouter } from 'next/router';
 
+export default function Layout({ title, keywords, description, children }) {
+  const router = useRouter();
 
-export default function Layout({ title, keywords, description, children}) {
+  return (
+    <div>
+      <Head>
+        <title>{title}</title>
+        <meta name='description' content={description} />
+        <meta name='keywords' content={keywords} />
+      </Head>
 
-    const router = useRouter()
+      <Header />
 
-    return (
-        <div>
-            <Head>
-                <title>{title}</title>
-                <meta name='description' content={description} />
-                <meta name='keywords' content={keywords} />
-            </Head>
+      {children}
 
-            <Header />
-            
-            <div>{children}</div>
-            
-
-            <Footer />
-
-        </div>
-    )
+      <Footer />
+    </div>
+  );
 }
 
 Layout.defaultProps = {
-    title: 'Jacob Creative | Web Design & Development Studio',
-    description: 'Welcome to Jacob Creative! Web Design and Development Studio',
-    keywords: 'web development, web design, studio, creative'
-}
+  title: 'Jacob Creative | Web Design & Development Studio',
+  description: 'Welcome to Jacob Creative! Web Design and Development Studio',
+  keywords: 'web development, web design, studio, creative',
+};

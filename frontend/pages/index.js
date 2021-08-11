@@ -1,18 +1,20 @@
 import Layout from '@/components/Layout'
-import Showcase from '@/components/Homepage/HomeShowcase'
+import HomeShowcase from '@/components/Homepage/HomeShowcase'
 import HomeServices from '@/components/Homepage/HomeServices'
-import Head from 'next/head'
-import Image from 'next/image'
+import HomeTeam from '@/components/Homepage/HomeTeam'
+import HomeBlog from '@/components/Homepage/HomeBlog'
+import HomeContact from '@/components/Homepage/HomeContact'
 
 export default function Home() {
-  return (
-    
-    <Layout>
-      
-      <Showcase />
-      <HomeServices />
-
-    </Layout>
-
-  )
+    return (
+        <Layout>
+            
+            <HomeShowcase />
+            <HomeServices />
+            <HomeTeam />
+            <HomeBlog />
+            <HomeContact />
+            
+        </Layout>
+    )
 }

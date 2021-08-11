@@ -3,7 +3,22 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     
-    extend: {},
+    extend: {
+        colors: {
+            jcBlue: '#639aff',
+            jcBlueDark: '#3f83ff'
+        },
+        fontFamily: {
+          jcHeading: ['Nunito', 'sans-serif'],
+          jcAltHeading: ['Montserrat', 'sans-serif'],
+          jcSubHeading: ['Roboto', 'sans-serif'],
+          jcBody: ['Mulish', 'sans-serif'],
+          jcBodyBackup: ['Open Sans', 'sans-serif'],
+        },
+        height: {
+          '375': '375px',  
+        },
+    },
     container: {
       center: true,
     },
