@@ -1,15 +1,16 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import {IconContext} from 'react-icons'
-import {FaFacebookF, FaTwitter, FaInstagram} from 'react-icons/fa'
+import {FaFacebookF, FaTwitter, FaInstagram, FaBars, FaTimes} from 'react-icons/fa'
 import { useState, useEffect, useContext } from 'react'
 import AuthContext from '@/context/AuthContext'
 
 export default function Header() {
 	const { user, logout } = useContext(AuthContext)
 	const [navbar, setNavbar] = useState(false)
+    const [mobileNavOpen, setMobileNavOpen] = useState(false)
 
-	const setActiveNav = () => {
+	const getNavScrollY = () => {
         if(window.scrollY >= 110) {
             setNavbar(true)
         } else if(window.scrollY <= 80) {
@@ -18,96 +19,109 @@ export default function Header() {
     }
     
     useEffect(() => {
-        window.addEventListener('scroll', setActiveNav)
+        window.addEventListener('scroll', getNavScrollY)
         
         return () => {
-            window.removeEventListener('scroll', setActiveNav)
+            window.removeEventListener('scroll', getNavScrollY)
         }
     })
 
 	return (
 		<>
-            <nav className={`p-2 mt-0 fixed w-full z-50 top-0 transition duration-500 ease-in-out ${navbar ? 'bg-gray-100' : 'bg-transparent'}` }>
-                <div className={`container mx-auto flex justify-between items-center h-12`}> 
-                    <Link href='/'>
-                        <a className={`font-bold tracking-normal font-jcHeading text-4xl ${navbar ? 'text-gray-900' : 'text-gray-50'}`}> 
-                            {/* <Image
-                                src='/jacobcreative_logo_light.svg'
-                                alt='Jacob Creative Logo'
-                                width={50}
-                                height={50}
-                            />  */}
-                            JACOB <span className='font-medium tracking-tight text-2xl'>creative</span>
-                            
-                        </a>
-                    </Link>
+            <nav className={`p-2 mt-0 fixed flex justify-between w-full z-50 top-0 md:transition md:duration-500 md:ease-in-out ${(navbar || mobileNavOpen) ? 'bg-gray-100 text-gray-900' : 'bg-transparent text-gray-50'}` }>
+                <div className={`container mx-auto flex flex-wrap justify-between md:h-12`}> 
+                
+                    <div className='w-full relative flex justify-between md:w-auto md:static md:justify-start'>
+                        <Link href='/'>
+                            <a className={`font-bold tracking-normal font-jcHeading text-4xl`}> 
+                                {/* <Image
+                                    src='/jacobcreative_logo_light.svg'
+                                    alt='Jacob Creative Logo'
+                                    width={50}
+                                    height={50}
+                                />  */}
+                                JACOB <span className='font-medium tracking-tight text-2xl'>creative</span>
+                                
+                            </a>
+                        </Link>
+                        <button className='justify-self-end text-xl leading-none px-3 py-1 rounded md:hidden outline-none focus:outline-none' type='button' onClick={() => setMobileNavOpen(!mobileNavOpen)}>
+                            {mobileNavOpen ? <FaTimes /> : <FaBars />}
+                        </button>
+                    </div>
                     
-                    <ul className={`flex flex-row font-semibold ${navbar ? 'text-gray-900' : 'text-gray-50'}`}>
-                        <li className=''>
-                            <Link href='/'>
-                                <a className=''>Home</a>
-                            </Link>
-                        </li>
-                        <li className='ml-4'>
-                            <Link href='/about'>
-                                <a className=''>About</a>
-                            </Link>
-                        </li>
-                        <li className='ml-4'>
-                            <Link href='#'>
-                                <a className=''>Services</a>
-                            </Link>
-                        </li>
-                        <li className='ml-4'>
-                            <Link href='/blog'>
-                                <a className=''>Blog</a>
-                            </Link>
-                        </li>
-                        <li className='ml-4'>
-                            <Link href='#'>
-                                <a className=''>Contact</a>
-                            </Link>
-                        </li>
+                    <div className={'md:flex flex-grow justify-center items-center' + (mobileNavOpen ? ' flex' : ' hidden')}>
                         
-                        <li className='flex items-center ml-12'>
-                            <Link href='https://www.facebook.com/JacobCreativeCA'>
-                                <a>
-                                    <FaFacebookF />
-                                </a>
-                            </Link>
-                        </li>
-                        <li className='flex items-center ml-4'>
-                            <Link href='https://twitter.com/JacobCreativeCA'>
-                                <a>
-                                    <FaTwitter />
-                                </a>
-                            </Link>
-                        </li>
-                        <li className='flex items-center ml-4'>
-                            <Link href='https://www.instagram.com/jacobcreativeca/'>
-                                <a>
-                                    <FaInstagram />
-                                </a>
-                            </Link>
-                        </li>
-
-                        {user ? (
-                            // If Logged In
-                            <>
-                                <li>
-                                    <Link href='/admin/dashboard'>
-                                        <a>Dashboard</a>
+                        <ul className='flex flex-col text-center md:flex-row space-y-4 md:space-y-0 md:space-x-4 list-none font-semibold md:ml-auto'>
+                            <li className=''>
+                                <Link href='/'>
+                                    <a className=''>Home</a>
+                                </Link>
+                            </li>
+                            <li className=''>
+                                <Link href='/about'>
+                                    <a className=''>About</a>
+                                </Link>
+                            </li>
+                            <li className=''>
+                                <Link href='#'>
+                                    <a className=''>Services</a>
+                                </Link>
+                            </li>
+                            <li className=''>
+                                <Link href='/blog'>
+                                    <a className=''>Blog</a>
+                                </Link>
+                            </li>
+                            <li className=''>
+                                <Link href='#'>
+                                    <a className=''>Contact</a>
+                                </Link>
+                            </li>
+                            
+                            <div className='flex flex-row items-center justify-center'>
+                                <li className='flex items-center mx-4 md:ml-8 lg:ml-12 '>
+                                    <Link href='https://www.facebook.com/JacobCreativeCA'>
+                                        <a>
+                                            <FaFacebookF />
+                                        </a>
                                     </Link>
                                 </li>
-                                <li>
-                                    <button onClick={() => logout()}>Logout</button>
+                                <li className='flex items-center mx-4 md:ml-4'>
+                                    <Link href='https://twitter.com/JacobCreativeCA'>
+                                        <a>
+                                            <FaTwitter />
+                                        </a>
+                                    </Link>
                                 </li>
-                            </>
-                        ) : (
-                            // If Logged Out
-                            <></>
-                        )}
-                    </ul>
+                                <li className='flex items-center mx-4 md:ml-4'>
+                                    <Link href='https://www.instagram.com/jacobcreativeca/'>
+                                        <a>
+                                            <FaInstagram />
+                                        </a>
+                                    </Link>
+                                </li>
+                            </div>
+
+                            {user ? (
+                                // If Logged In
+                                <>
+                                    <li>
+                                        <Link href='/admin/dashboard'>
+                                            <a>Dashboard</a>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <button onClick={() => logout()}>Logout</button>
+                                    </li>
+                                </>
+                            ) : (
+                                // If Logged Out
+                                <></>
+                            )}
+                        </ul>
+                        
+                    </div>
+                    
 
                 </div>
                 
