@@ -51,6 +51,8 @@ export default function Header() {
                     
                     <div className={'md:flex flex-grow justify-center items-center' + (mobileNavOpen ? ' flex' : ' hidden')}>
                         
+                        {/* TO DO: ADD OPACITY AND COLOR HOVER TO ALL ITEMS */}
+                        
                         <ul className='flex flex-col text-center md:flex-row space-y-4 md:space-y-0 md:space-x-4 list-none font-semibold md:ml-auto'>
                             <li className=''>
                                 <Link href='/'>
