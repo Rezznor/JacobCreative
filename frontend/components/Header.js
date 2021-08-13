@@ -79,21 +79,21 @@ export default function Header() {
                             </li>
                             
                             <div className='flex flex-row items-center justify-center'>
-                                <li className='flex items-center mx-4 md:ml-8 lg:ml-12 '>
+                                <li className={'flex items-center mx-4 md:ml-8 lg:ml-12' + (navbar ? ' hover:text-jcBlue' : '')}>
                                     <Link href='https://www.facebook.com/JacobCreativeCA'>
                                         <a>
                                             <FaFacebookF />
                                         </a>
                                     </Link>
                                 </li>
-                                <li className='flex items-center mx-4 md:ml-4'>
+                                <li className={'flex items-center mx-4 md:ml-4' + (navbar ? ' hover:text-jcBlue' : '')}>
                                     <Link href='https://twitter.com/JacobCreativeCA'>
                                         <a>
                                             <FaTwitter />
                                         </a>
                                     </Link>
                                 </li>
-                                <li className='flex items-center mx-4 md:ml-4'>
+                                <li className={'flex items-center mx-4 md:ml-4' + (navbar ? ' hover:text-jcBlue' : '')}>
                                     <Link href='https://www.instagram.com/jacobcreativeca/'>
                                         <a>
                                             <FaInstagram />
