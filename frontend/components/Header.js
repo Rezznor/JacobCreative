@@ -1,14 +1,15 @@
 import Link from 'next/link'
+import JcLink from '@/components/JcLink'
 import Image from 'next/image'
-import {IconContext} from 'react-icons'
-import {FaFacebookF, FaTwitter, FaInstagram, FaBars, FaTimes} from 'react-icons/fa'
+import { FaFacebookF, FaTwitter, FaInstagram, FaBars, FaTimes} from 'react-icons/fa'
 import { useState, useEffect, useContext } from 'react'
 import AuthContext from '@/context/AuthContext'
 
 export default function Header() {
 	const { user, logout } = useContext(AuthContext)
-	const [navbar, setNavbar] = useState(false)
+    const [navbar, setNavbar] = useState(false)
     const [mobileNavOpen, setMobileNavOpen] = useState(false)
+    const [activeRoute, setActiveRoute] = useState(false)
 
 	const getNavScrollY = () => {
         if(window.scrollY >= 110) {
@@ -49,55 +50,55 @@ export default function Header() {
                         </button>
                     </div>
                     
-                    <div className={'md:flex flex-grow justify-center items-center' + (mobileNavOpen ? ' flex' : ' hidden')}>
+                    <div className={`md:flex flex-grow justify-center items-center ${mobileNavOpen ? ' flex' : ' hidden'}`}>
                         
                         {/* TO DO: ADD OPACITY AND COLOR HOVER TO ALL ITEMS */}
                         
                         <ul className='flex flex-col text-center md:flex-row space-y-4 md:space-y-0 md:space-x-4 list-none font-semibold md:ml-auto'>
                             <li className=''>
-                                <Link href='/'>
+                                <JcLink href='/'>
                                     <a className=''>Home</a>
-                                </Link>
+                                </JcLink>
                             </li>
                             <li className=''>
-                                <Link href='/about'>
+                                <JcLink href='/about'>
                                     <a className=''>About</a>
-                                </Link>
+                                </JcLink>
                             </li>
                             <li className=''>
-                                <Link href='#'>
+                                <JcLink href='#'>
                                     <a className=''>Services</a>
-                                </Link>
+                                </JcLink>
                             </li>
                             <li className=''>
-                                <Link href='/blog'>
+                                <JcLink href='/blog'>
                                     <a className=''>Blog</a>
-                                </Link>
+                                </JcLink>
                             </li>
                             <li className=''>
-                                <Link href='#'>
+                                <JcLink href='#'>
                                     <a className=''>Contact</a>
-                                </Link>
+                                </JcLink>
                             </li>
                             
                             <div className='flex flex-row items-center justify-center'>
-                                <li className={'flex items-center mx-4 md:ml-8 lg:ml-12' + (navbar ? ' hover:text-jcBlue' : '')}>
+                                <li className={`flex items-center mx-4 md:ml-8 lg:ml-12 ${navbar ? ' hover:text-jcBlue' : ''}`}>
                                     <Link href='https://www.facebook.com/JacobCreativeCA'>
-                                        <a>
+                                        <a className=''>
                                             <FaFacebookF />
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={'flex items-center mx-4 md:ml-4' + (navbar ? ' hover:text-jcBlue' : '')}>
+                                <li className={`flex items-center mx-4 md:ml-4 ${navbar ? ' hover:text-jcBlue' : ''}`}>
                                     <Link href='https://twitter.com/JacobCreativeCA'>
-                                        <a>
+                                        <a className=''>
                                             <FaTwitter />
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={'flex items-center mx-4 md:ml-4' + (navbar ? ' hover:text-jcBlue' : '')}>
+                                <li className={`flex items-center mx-4 md:ml-4 ${navbar ? ' hover:text-jcBlue' : ''}`}>
                                     <Link href='https://www.instagram.com/jacobcreativeca/'>
-                                        <a>
+                                        <a className=''>
                                             <FaInstagram />
                                         </a>
                                     </Link>
