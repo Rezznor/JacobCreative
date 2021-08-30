@@ -33,21 +33,12 @@ export default function Header() {
 
 	return (
 		<>
-            <nav className={`p-2 mt-0 fixed flex justify-between w-full z-50 top-0 md:transition md:duration-500 md:ease-in-out ${(navbar || mobileNavOpen) ? 'bg-gray-100 text-gray-900' : 'bg-transparent text-gray-50'}` }>
+            <nav className={`p-2 mt-0 fixed flex justify-between w-full z-50 top-0 md:transition md:duration-300 md:ease-in-out ${(navbar || mobileNavOpen) ? 'bg-gray-100 text-gray-900' : 'bg-transparent text-gray-50'}` }>
                 <div className={`container mx-auto flex flex-wrap justify-between md:h-12`}> 
                 
                     <div className='w-full relative flex justify-between md:w-auto md:static md:justify-start'>
                         <Link href='/'>
-                            <a className={`font-bold tracking-normal font-jcHeading text-4xl`}> 
-                                {/* <Image
-                                    src='/jacobcreative_logo_light.svg'
-                                    alt='Jacob Creative Logo'
-                                    width={50}
-                                    height={50}
-                                />  */}
-                                JACOB <span className='font-medium tracking-tight text-2xl'>creative</span>
-                                
-                            </a>
+                            <a className={`font-bold tracking-normal font-jcLogo text-4xl flex items-center`}>Jacob Creative</a>
                         </Link>
                         <button className='justify-self-end text-xl leading-none px-3 py-1 rounded md:hidden outline-none focus:outline-none' type='button' onClick={() => setMobileNavOpen(!mobileNavOpen)}>
                             {mobileNavOpen ? <FaTimes /> : <FaBars />}

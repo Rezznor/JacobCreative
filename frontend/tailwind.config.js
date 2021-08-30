@@ -1,6 +1,6 @@
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}','/components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: 'class', // or 'media' or 'class'
+  darkMode: false, //set to 'class' to activate
   theme: {
     
     extend: {
@@ -9,6 +9,7 @@ module.exports = {
             jcBlueDark: '#3f83ff'
         },
         fontFamily: {
+          jcLogo: ['Bebas Neue', 'cursive'],
           jcHeading: ['Nunito', 'sans-serif'],
           jcAltHeading: ['Montserrat', 'sans-serif'],
           jcSubHeading: ['Roboto', 'sans-serif'],

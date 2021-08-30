@@ -4,11 +4,11 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider attribute='class'>
-        <AuthProvider>
-            <Component {...pageProps} />
-        </AuthProvider>
-    </ThemeProvider>
+    
+    <AuthProvider>
+        <Component {...pageProps} />
+    </AuthProvider>
+    
   )
 }
 
