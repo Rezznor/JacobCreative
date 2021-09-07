@@ -13,7 +13,7 @@ export default function Showcase() {
         <div className='container py-80'>
             <div className='grid grid-cols-1 md:grid-cols-2 text-center md:text-left'>
                 <div className=''>
-                    <h2 className='mb-8 text-gray-50 font-jcHeading font-bold tracking-tight text-5xl'>
+                    <h2 className='mb-8 text-gray-50 font-jcHeading2 font-bold tracking-tight text-5xl'>
                         We're a web design and development studio &#8212; focusing on
                         bringing small, local businesses to the web in {year}
                     </h2>

@@ -11,7 +11,7 @@ export default function HomeContact() {
                 <div className='flex justify-between'>
                     
                     <div className=''>
-                        <h2 className=''>Ready to get started?</h2>
+                        <h2 className=''>Ready to jump start your business?</h2>
                         <Link href='/contact'>
                             <a className=''>Lets Chat</a>
                         </Link>

@@ -15,7 +15,7 @@ class MyDocument extends Document {
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
             <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Mulish:wght@600&family=Nunito:wght@300;400;700&family=Roboto:wght@400;500;700&family=Bebas+Neue&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
         </Head>
-        <body className='bg-white font-jcBody'>
+        <body className='bg-white font-jcSubHeading text-base leading-7'>
           <Main />
           <NextScript />
           <div id="modal-root"></div>

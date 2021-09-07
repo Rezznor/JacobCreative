@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import {FaFacebookF, FaTwitter, FaGithub, FaInstagram, FaLinkedinIn} from 'react-icons/fa'
+import {FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaHeart} from 'react-icons/fa'
 import { FiPhoneCall, FiMail } from 'react-icons/fi'
 
 export default function Footer() {
@@ -42,12 +42,12 @@ export default function Footer() {
                         </div>
                         <div className=''>
                             <h4 className='font-jcHeading2 font-medium mb-4 text-white'>Get in touch</h4>
-                            <p>Based in New Dundee,<br /> Ontario, Canada</p>
+                            <p className='mb-4'>Based in New Dundee,<br /> Ontario, Canada</p>
                             <div className='flex '>
-                                <FiPhoneCall /> +1 234 567 8910
+                                <FiPhoneCall className='my-auto mr-3 text-white' /> +1 234 567 8910
                             </div>
                             <div className='flex'>
-                                <FiMail /> josh@jacobcreative.ca
+                                <FiMail className='my-auto mr-3 text-white' /> josh@jacobcreative.ca
                             </div>
                         </div>
                         <div className=''>
@@ -63,14 +63,14 @@ export default function Footer() {
                 
                 <div className='border-t border-white border-opacity-30'>
                     <div className='container'>
-                        <div className='flex justify-between py-12'>
+                        <div className='flex justify-between pt-10 pb-6'>
                             <Link href='/'>
-                                <a className={`font-bold tracking-normal font-jcLogo text-4xl flex items-center`}>Jacob Creative</a>
+                                <a className={`font-jcLogo font-bold tracking-normal text-4xl flex items-center text-white my-auto`}>Jacob Creative</a>
                             </Link>
                             
-                            <p className=''>&copy; 2021 JacobCreative</p>
+                            <p className='flex my-auto'>&copy; 2021 JacobCreative. Made with <FaHeart className='text-red-600 mt-1 mx-2' /> in Ontario.</p>
 
-                            <ul className="flex space-x-8">
+                            <ul className="flex space-x-4 text-white my-auto">
                                 <li className="">
                                     <Link href='https://www.facebook.com/JacobCreativeCA'>
                                         <a>
