@@ -59,7 +59,7 @@ export default function Header() {
                                 </JcLink>
                             </li>
                             <li className=''>
-                                <JcLink href='#'>
+                                <JcLink href='/services'>
                                     <a className=''>Services</a>
                                 </JcLink>
                             </li>
@@ -69,7 +69,7 @@ export default function Header() {
                                 </JcLink>
                             </li>
                             <li className=''>
-                                <JcLink href='#'>
+                                <JcLink href='/contact'>
                                     <a className=''>Contact</a>
                                 </JcLink>
                             </li>

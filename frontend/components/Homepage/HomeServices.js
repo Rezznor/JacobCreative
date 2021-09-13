@@ -10,8 +10,8 @@ export default function HomeServices() {
     <div className='flex w-full bg-gray-100 py-16'>
         <div className='container'>
             <div className='text-center w-1/2 m-auto'>
-                <h3 className='font-jcHeading2 font-medium text-base mt-4 mb-8 text-jcBlue'>Our Core Services</h3>
-                <h2 className='font-jcHeading2 font-bold text-3xl'>Risus quis varius quam quisque id diam vel quam elementum, Maiores et perferendis eaque.</h2>
+                <h3 className='font-jcHeading2 font-medium text-base mt-4 mb-8 text-jcBlue'>Services</h3>
+                <h2 className='font-jcHeading2 font-bold text-3xl w-4/5 m-auto'>Let's grow your business together using our suite of services</h2>
             </div>
 
             <div className='grid grid-cols-4 gap-8 my-24'>
@@ -22,7 +22,7 @@ export default function HomeServices() {
                     <div className='py-4'>
                         <div className='mb-2 text-center text-gray-800 font-jcHeading2 font-medium'>Web Development</div>
                         <p className='text-gray-500 text-base font-jcSubHeading px-8 text-center'>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! 
+                            Creating the right site for you &#8211; From unique personal portfolios to full featured eCommerce shops and everything in-between
                         </p>
                     </div>
                 </div>
@@ -32,7 +32,7 @@ export default function HomeServices() {
                     <div className='py-4'>
                         <div className='mb-2 text-center text-gray-800 font-jcHeading2 font-medium'>Hosting and Maintenance</div>
                         <p className='text-gray-500 text-base font-jcSubHeading px-8 text-center'>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! 
+                            Our Hosting and Maintence packages will keep you online and up to date 
                         </p>
                     </div>
                 </div>
@@ -42,7 +42,7 @@ export default function HomeServices() {
                     <div className='py-4'>
                         <div className='mb-2 text-center text-gray-800 font-jcHeading2 font-medium'>CMS and eCommerce</div>
                         <p className='text-gray-500 text-base font-jcSubHeading px-8 text-center'>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! 
+                            Providing you the freedom to manage and update your content &#8211; Whether that means small content tweaks or adding a new product line 
                         </p>
                     </div>
                 </div> 
@@ -52,7 +52,7 @@ export default function HomeServices() {
                     <div className='py-4'>
                         <div className='mb-2 text-center text-gray-800 font-jcHeading2 font-medium'>SEO and Analytics</div>
                         <p className='text-gray-500 text-base font-jcSubHeading px-8 text-center'>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! 
+                            Just getting online isn't enough these days. We'll work with you to improve your discoverability through SEO and Analytics 
                         </p>
                     </div>
                 </div>    
@@ -61,7 +61,7 @@ export default function HomeServices() {
             </div>
             
             <div className='flex justify-center w-full'>
-                <Link href='/'>
+                <Link href='/services'>
                     <a className='transform transition duration-300 px-10 py-4 rounded shadow-jc uppercase font-medium font-jcHeading2 text-xs tracking-wider bg-white border-2 border-transparent hover:shadow-jcHover hover:-translate-y-1'>Learn More</a>
                 </Link>
                 

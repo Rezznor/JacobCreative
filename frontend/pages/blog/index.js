@@ -1,12 +1,14 @@
 import Layout from '@/components/Layout'
 import BlogItem from '@/components/BlogItem'
 import Pagination from '@/components/Pagination'
+import BaseShowcase from '@/components/BaseShowcase'
 import {API_URL, PER_PAGE} from '@/config/index'
 
 export default function BlogPage({ articles, page, total }) {
     return (
         
         <Layout>
+            <BaseShowcase pageTitle="Blog" />
             <h1>Blog Posts</h1>
 
             {articles.length === 0 && <h3>No events to show</h3>}

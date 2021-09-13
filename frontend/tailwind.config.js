@@ -10,6 +10,10 @@ module.exports = {
     },
     
     extend: {
+        lineHeight: {
+            '11': '2.75rem',
+            '12': '3rem',
+        },
         colors: {
             jcBlue: '#639aff',
             jcBlueDark: '#3f83ff',

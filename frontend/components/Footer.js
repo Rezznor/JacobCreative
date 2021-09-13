@@ -68,7 +68,7 @@ export default function Footer() {
                                 <a className={`font-jcLogo font-bold tracking-normal text-4xl flex items-center text-white my-auto`}>Jacob Creative</a>
                             </Link>
                             
-                            <p className='flex my-auto'>&copy; 2021 JacobCreative. Made with <FaHeart className='text-red-600 mt-1 mx-2' /> in Ontario.</p>
+                            <p className='flex my-auto'>&copy; 2021 JacobCreative. Made with <FaHeart className='text-jcBlue mt-1 mx-2' /> in Ontario.</p>
 
                             <ul className="flex space-x-4 text-white my-auto">
                                 <li className="">
