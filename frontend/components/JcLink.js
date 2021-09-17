@@ -3,14 +3,22 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from '@/styles/Header.module.css'
 
-const JcLink = ({ href, children }) => {
+const JcLink = ({ isScrolling, href, children }) => {
     const router = useRouter()
     
     let className = children.props.className || ''
     if(router.pathname === href) {
-        className = `py-1 ${className} ${styles.jcLinkHoverActive}`
+        if(isScrolling) {
+            className = `py-1 ${className} ${styles.jcLinkHoverActiveDark}`
+        } else {
+            className = `py-1 ${className} ${styles.jcLinkHoverActive}`
+        }
     } else {
-        className = `py-1 ${className} ${styles.jcLinkHover}`
+        if(isScrolling) {
+            className = `py-1 ${className} ${styles.jcLinkHoverDark}`
+        } else {
+            className = `py-1 ${className} ${styles.jcLinkHover}`
+        }
     }
     
     return <Link href={href}>{React.cloneElement(children, { className })}</Link>

@@ -7,6 +7,7 @@ module.exports = {
         jc: '0 0 15px rgba(0, 0, 0, 0.1)',
         jcHover: '0 8px 30px -5px rgba(0, 0, 0, 0.2)',
         services: '0 0 30px rgba(0, 0, 0, 0.08)',
+        jcMenuScroll: '0 2px 2px -2px rgba(0,0,0,.2);',
     },
     
     extend: {

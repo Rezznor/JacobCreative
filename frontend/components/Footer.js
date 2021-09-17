@@ -71,28 +71,28 @@ export default function Footer() {
                             <p className='flex my-auto'>&copy; 2021 JacobCreative. Made with <FaHeart className='text-jcBlue mt-1 mx-2' /> in Ontario.</p>
 
                             <ul className="flex space-x-4 text-white my-auto">
-                                <li className="">
+                                <li className="hover:text-jcBlue">
                                     <Link href='https://www.facebook.com/JacobCreativeCA'>
                                         <a>
                                             <FaFacebookF />
                                         </a>
                                     </Link>
                                 </li>
-                                <li className="">
+                                <li className="hover:text-jcBlue">
                                     <Link href='https://twitter.com/JacobCreativeCA'>
                                         <a>
                                             <FaTwitter />
                                         </a>
                                     </Link>
                                 </li>
-                                <li className="">
+                                <li className="hover:text-jcBlue">
                                     <Link href='https://www.instagram.com/jacobcreativeca/'>
                                         <a>
                                             <FaInstagram />
                                         </a>
                                     </Link>
                                 </li>
-                                <li className="">
+                                <li className="hover:text-jcBlue">
                                     <Link href='https://www.instagram.com/jacobcreativeca/'>
                                         <a>
                                             <FaLinkedinIn />

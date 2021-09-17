@@ -33,7 +33,7 @@ export default function Header() {
 
 	return (
 		<>
-            <nav className={`p-2 mt-0 fixed flex justify-between w-full z-50 top-0 md:transition md:duration-300 md:ease-in-out ${(navbar || mobileNavOpen) ? 'bg-gray-100 text-gray-900' : 'bg-transparent text-gray-50'}` }>
+            <nav className={`p-2 mt-0 fixed flex justify-between w-full z-50 top-0 md:transition md:duration-300 md:ease-in-out ${(navbar || mobileNavOpen) ? 'bg-white text-gray-900 shadow-jcMenuScroll' : 'bg-transparent text-gray-50'}` }>
                 <div className={`container mx-auto flex flex-wrap justify-between md:h-12`}> 
                 
                     <div className='w-full relative flex justify-between md:w-auto md:static md:justify-start'>
@@ -49,27 +49,27 @@ export default function Header() {
                         
                         <ul className='flex flex-col text-center md:flex-row space-y-4 md:space-y-0 md:space-x-8 list-none font-semibold md:ml-auto'>
                             <li className=''>
-                                <JcLink href='/'>
+                                <JcLink href='/' isScrolling={navbar}>
                                     <a className=''>Home</a>
                                 </JcLink>
                             </li>
                             <li className=''>
-                                <JcLink href='/about'>
+                                <JcLink href='/about' isScrolling={navbar}>
                                     <a className=''>About</a>
                                 </JcLink>
                             </li>
                             <li className=''>
-                                <JcLink href='/services'>
+                                <JcLink href='/services' isScrolling={navbar}>
                                     <a className=''>Services</a>
                                 </JcLink>
                             </li>
                             <li className=''>
-                                <JcLink href='/blog'>
+                                <JcLink href='/blog' isScrolling={navbar}>
                                     <a className=''>Blog</a>
                                 </JcLink>
                             </li>
                             <li className=''>
-                                <JcLink href='/contact'>
+                                <JcLink href='/contact' isScrolling={navbar}>
                                     <a className=''>Contact</a>
                                 </JcLink>
                             </li>
@@ -78,9 +78,9 @@ export default function Header() {
                                 // If Logged In
                                 <>
                                     <li>
-                                        <JcLink href='/admin/dashboard'>
+                                        <Link href='/admin/dashboard'>
                                             <a>Dashboard</a>
-                                        </JcLink>
+                                        </Link>
                                     </li>
                                     <li>
                                         <Link href='/'>

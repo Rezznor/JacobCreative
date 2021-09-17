@@ -13,34 +13,34 @@ export default function HomeContact() {
                     <div className=''>
                         <h2 className='font-jcHeading2 font-medium text-2xl text-gray-900 mb-4'>Ready to jump start your business?</h2>
                         <Link href='/contact'>
-                            <a className='text-jcBlue text-sm font-jcHeading2 font-medium uppercase border-b-2 border-jcBlue'>Lets Get Started</a>
+                            <a className='text-jcBlue text-sm font-jcHeading2 font-medium uppercase border-b-2 border-jcBlue hover:border-gray-900'>Lets Get Started</a>
                         </Link>
                     </div>
                     <div className='grid content-between'>
                         <h4 className='font-jcHeading2 text-sm text-jcTextLight'>Join us on social media</h4>
                         <ul className="flex space-x-8">
-                            <li className="">
+                            <li className="hover:text-jcBlue">
                                 <Link href='https://www.facebook.com/JacobCreativeCA'>
                                     <a>
                                         <FaFacebookF />
                                     </a>
                                 </Link>
                             </li>
-                            <li className="">
+                            <li className="hover:text-jcBlue">
                                 <Link href='https://twitter.com/JacobCreativeCA'>
                                     <a>
                                         <FaTwitter />
                                     </a>
                                 </Link>
                             </li>
-                            <li className="">
+                            <li className="hover:text-jcBlue">
                                 <Link href='https://www.instagram.com/jacobcreativeca/'>
                                     <a>
                                         <FaInstagram />
                                     </a>
                                 </Link>
                             </li>
-                            <li className="">
+                            <li className="hover:text-jcBlue">
                                 <Link href='https://www.instagram.com/jacobcreativeca/'>
                                     <a>
                                         <FaLinkedinIn />

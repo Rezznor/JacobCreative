@@ -2,7 +2,7 @@
 export default function Showcase({ pageTitle }) {
     
   return (
-    <div className='bg-no-repeat bg-cover bg-center bg-jcBlueDark bg-blend-multiply' style={{backgroundImage: "url(/homepage_bg_2.jpg)" }}>
+    <div className='bg-no-repeat bg-cover bg-center bg-jcBlueDark bg-blend-multiply' >
         <div className='container pt-60 pb-40'>
             <div className='grid grid-cols-1 md:grid-cols-3 text-center md:text-left'>
                 <div className='col-span-2'>
