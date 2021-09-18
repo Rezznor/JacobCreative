@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import {FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaHeart} from 'react-icons/fa'
 import { FiPhoneCall, FiMail } from 'react-icons/fi'
+import MailchimpSubscribe from '@/components/MailchimpSubscribe'
 
 export default function Footer() {
     return (
@@ -52,9 +53,8 @@ export default function Footer() {
                         </div>
                         <div className=''>
                             <h4 className='font-jcHeading2 font-medium mb-4 text-white'>Subscribe to our newsletter</h4>
-                            <div className='flex'>
-                                
-                            </div>
+                            <MailchimpSubscribe />
+                            
                         </div>
                         
                         
