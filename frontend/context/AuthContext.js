@@ -1,6 +1,7 @@
 import {createContext, useContext, useState, useEffect} from 'react'
 import {useRouter} from 'next/router'
 import {NEXT_URL} from '@/config/index'
+import Cookies from 'js-cookie'
 
 const AuthContext = createContext()
 
@@ -51,9 +52,10 @@ export const AuthProvider = ({children}) => {
 
     // Check if user is logged in
     const checkUserLoggedIn = async (user) => {
+        
         const res = await fetch(`${NEXT_URL}/api/user`)
         const data = await res.json()
-
+        
         if(res.ok) {
             setUser(data.user)
         } else {

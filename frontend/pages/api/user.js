@@ -6,6 +6,7 @@ export default async (req, res) => {
     if(req.method === 'GET') {
 
         if(!req.headers.cookie) {
+            //console.log(req.headers.cookie)
             res.status(403).json({ message: 'Not Authorized' })
             return
         }
@@ -29,6 +30,6 @@ export default async (req, res) => {
 
     } else {
         res.setHeader('Allow', ['GET'])
-        res.status(405).json({ message: `Method ${req.method} now allowed.`})
+        res.status(405).json({ message: `Method ${req.method} not allowed.`})
     }
 }

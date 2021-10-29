@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout'
 import BlogItem from '@/components/BlogItem'
+import BlogPost from '@/components/BlogPage/BlogPost'
 import Pagination from '@/components/Pagination'
 import BaseShowcase from '@/components/BaseShowcase'
 import {API_URL, PER_PAGE} from '@/config/index'
@@ -14,10 +15,13 @@ export default function BlogPage({ articles, page, total }) {
             {articles.length === 0 && <h3>No events to show</h3>}
 
             {console.log(articles)}
-
-            {articles.map(art => (
-                <BlogItem key={art.id} art={art} />
-            ))}
+            <div className='container'>
+                <div className='grid grid-cols-3'>
+                    {articles.map(art => (
+                            <BlogPost key={art.id} art={art} />
+                    ))}
+                </div>
+            </div>
 
             <Pagination page={page} total={total} />
 

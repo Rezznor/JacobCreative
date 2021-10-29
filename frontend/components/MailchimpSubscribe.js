@@ -23,7 +23,7 @@ export default function MailchimpSubscribe() {
         const { error } = await res.json()
         
         if(error) {
-            toast('An error has occurred.', {
+            toast.error('An error has occurred.', {
                 position: 'bottom-right',
                 autoClose: '5000',
                 hideProgreeBar: false,
@@ -36,7 +36,7 @@ export default function MailchimpSubscribe() {
         }
         
         inputEl.current.value = ''
-        toast('Success! You are now subscribed!', {
+        toast.success('Success! We\'ll get back to you soon!', {
             position: 'bottom-right',
             autoClose: '5000',
             hideProgreeBar: false,

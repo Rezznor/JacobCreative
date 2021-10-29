@@ -78,14 +78,14 @@ export default function Header() {
                                 // If Logged In
                                 <>
                                     <li>
-                                        <Link href='/admin/dashboard'>
+                                        <JcLink href='/admin/dashboard' isScrolling={navbar}>
                                             <a>Dashboard</a>
-                                        </Link>
+                                        </JcLink>
                                     </li>
                                     <li>
-                                        <Link href='/'>
+                                        <JcLink href='/' isScrolling={navbar} ignored>
                                             <a className='py-1 block relative overflow-hidden' onClick={() => logout()}>Logout</a>
-                                        </Link>
+                                        </JcLink>
                                     </li>
                                 </>
                             ) : (
