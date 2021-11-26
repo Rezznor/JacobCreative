@@ -10,16 +10,16 @@ export default function BlogPage({ articles, page, total }) {
         
         <Layout>
             <BaseShowcase pageTitle="Blog" />
-            <h1>Blog Posts</h1>
 
-            {articles.length === 0 && <h3>No events to show</h3>}
+            {articles.length === 0 && <h3>No posts to show</h3>}
 
-            {console.log(articles)}
-            <div className='container'>
-                <div className='grid grid-cols-3'>
-                    {articles.map(art => (
-                            <BlogPost key={art.id} art={art} />
-                    ))}
+            <div className='py-16'>
+                <div className='container'>
+                    <div className='grid grid-cols-3 gap-4'>
+                        {articles.map(art => (
+                                <BlogPost key={art.id} art={art} />
+                        ))}
+                    </div>
                 </div>
             </div>
 

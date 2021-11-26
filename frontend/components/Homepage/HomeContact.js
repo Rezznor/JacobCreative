@@ -4,7 +4,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/f
 
 export default function HomeContact() {
     return (
-        <div className='flex w-full bg-white py-20 bg-gray-50'>
+        <div className='flex w-full py-20 bg-gray-50'>
             
             <div className='container'>
                 

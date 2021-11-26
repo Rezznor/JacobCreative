@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import JcLink from '@/components/JcLink'
-import Image from 'next/image'
 import { FaFacebookF, FaTwitter, FaInstagram, FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa'
 import { useState, useEffect, useContext } from 'react'
 import AuthContext from '@/context/AuthContext'
