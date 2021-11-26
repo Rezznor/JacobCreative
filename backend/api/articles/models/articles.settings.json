@@ -19,8 +19,10 @@
       "type": "uid",
       "targetField": "title"
     },
-    "description": {
-      "type": "string"
+    "preview": {
+      "type": "text",
+      "required": true,
+      "maxLength": 180
     },
     "body": {
       "type": "richtext"
@@ -38,9 +40,21 @@
       "pluginOptions": {}
     },
     "user": {
+      "via": "articles",
       "plugin": "users-permissions",
-      "model": "user",
+      "model": "user"
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "model": "category",
       "via": "articles"
+    },
+    "tags": {
+      "via": "articles",
+      "collection": "tags"
     }
   }
 }
