@@ -6,7 +6,7 @@ import MailchimpSubscribe from '@/components/MailchimpSubscribe'
 export default function Footer() {
     return (
         
-        <footer className='bg-jcFooter text-jcTextLight'>
+        <footer className='bg-jcFooter text-jcTextLight w-full'>
             <div className=''>
                 
                 <div className='container'>
