@@ -74,7 +74,7 @@ export default function HomeProcess() {
                     </div>
                     
                     <div className='relative'>
-                        <Image src={processImg} />
+                        <Image src={processImg} priority={true} />
                     </div>
                         
                 </div>
