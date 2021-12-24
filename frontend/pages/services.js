@@ -12,7 +12,7 @@ export default function ServicesPage() {
                 <div className='container'>
                     
                     <div className='text-center w-1/2 mx-auto mb-20'>
-                        <h3 className='font-jcHeading2 font-medium text-base mt-4 mb-8 text-jcBlue'>Services</h3>
+                        
                         <h2 className='font-jcHeading2 font-bold text-3xl w-4/5 m-auto'>Let's grow your business together using our suite of services</h2>
                     </div>
                     
@@ -23,6 +23,7 @@ export default function ServicesPage() {
                         </div>
                         <div className='w-full m-auto'>
                             <h2 className='mb-2 text-gray-800 font-jcHeading2 font-medium'>Web Development</h2>
+                            <p className='text-gray-500 text-base font-jcSubHeading'></p>
                             <p className='text-gray-500 text-base font-jcSubHeading'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque vitae tempus quam pellentesque nec nam. Non curabitur gravida arcu ac tortor dignissim. Gravida quis blandit turpis cursus in hac habitasse platea. Tempus imperdiet nulla malesuada pellentesque. Justo nec ultrices dui sapien eget mi proin. Vitae congue eu consequat ac. Consectetur adipiscing elit duis tristique sollicitudin nibh. Tristique magna sit amet purus gravida quis. Enim nunc faucibus a pellentesque sit amet porttitor eget. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus a. Aliquam sem fringilla ut morbi tincidunt. Nunc consequat interdum varius sit amet. Quis blandit turpis cursus in hac habitasse platea.</p>
                         </div>
                         

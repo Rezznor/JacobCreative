@@ -2,7 +2,7 @@
 export default function Showcase({ pageTitle, tagLine }) {
     
   return (
-    <div className='bg-no-repeat bg-cover bg-center bg-jcBlueDark bg-blend-multiply' >
+    <div className='bg-no-repeat bg-cover bg-center bg-jcBlueDark bg-blend-multiply' style={{backgroundImage: "url(/images/code_bg1.jpg)" }}>
         <div className='container pt-80 pb-20'>
             <div className='flex'>
                 <div className='flex items-end w-full font-normal leading-5'>

@@ -1,4 +1,5 @@
-import Layout from '@/components/Layout';
+import Image from 'next/image'
+import Layout from '@/components/Layout'
 import BaseShowcase from '@/components/BaseShowcase'
 
 export default function AboutPage() {
@@ -13,9 +14,9 @@ export default function AboutPage() {
                     
                     <div className='grid grid-cols-3'>
                         <div className='flex w-full justify-center'>
-                            <div className='h-40 w-40 rounded-full my-auto'>
-                                <img src='/test_pic.jpg' alt='Picture of Jacob Creative CEO' className='rounded-full m-auto'/>
-                            </div>
+                            
+                            <img src='https://res.cloudinary.com/jacob-creative/image/upload/v1639861302/medium_josh_about_3e823a6e00.jpg' alt='Picture of Jacob Creative CEO' className='my-auto' />
+                            
                         </div>
                         <div className='w-full my-4 mx-8 col-span-2'>
                             <h3 className='mb-2 text-gray-800 font-jcHeading2 font-medium'>A quick introduction</h3>

@@ -10,8 +10,8 @@ export default function HomeTeam() {
                 
                 <div className='grid grid-cols-3'>
                     <div className='flex w-full justify-center'>
-                        <div className='h-40 w-40 rounded-full my-auto'>
-                            <Image src='/test_pic.jpg' alt='Picture of Jacob Creative CEO' height='160' width='160' className='rounded-full m-auto'/>
+                        <div className='h-64 w-64 rounded-full my-auto'>
+                            <Image src='https://res.cloudinary.com/jacob-creative/image/upload/v1639805017/josh_about_d17f500db6.jpg' alt='Picture of Jacob Creative CEO' height='256' width='256' className='rounded-full m-auto'/>
                         </div>
                     </div>
                     <div className='w-full my-4 mx-8 col-span-2'>

@@ -29,18 +29,16 @@ export default function ArticlePage({ art }) {
             <div className='bg-gray-50 py-16'>
                 <div className='container'>
                     
-                    <Link href='/blog'>
-                        <a>{'<'} Go Back</a>
-                    </Link>
+                    <div className='flex justify-between'>
+                        <Link href='/blog'>
+                            <a>{'<'} Go Back</a>
+                        </Link>
+                        <div className='flex space-x-4'>
+                            <CategoryLabel categories={art.category} />
+                        </div>
+                    </div>
                     
                     <div className='w-full px-10 py-6 bg-white rounded-lg shadow-md mt-6'>
-                        
-                        <div className='flex justify-between items-center mt-4'>
-                            <h1 className='text-5xl mb-7'>{art.title}</h1>
-                            <div className='flex space-x-4'>
-                                <CategoryLabel categories={art.category} />
-                            </div>
-                        </div>
                         
                         {art.image && (
                             <img src={art.image.formats.large.url} alt='' className='w-full rounded' />

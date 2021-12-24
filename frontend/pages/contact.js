@@ -7,7 +7,7 @@ import ContactMap from '@/components/Contactpage/ContactMap'
 export default function ContactPage() {
     return (
         <Layout>
-            <BaseShowcase pageTitle="Contact Us" tagLine="We create brand new corporate identities!" />
+            <BaseShowcase pageTitle="Contact Us" />
             <ContactForm />
             <ContactMap />
             <HomeContact />
