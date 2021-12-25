@@ -11,11 +11,21 @@ export default function BlogPage({ articles, page, total }) {
         <Layout>
             <BaseShowcase pageTitle="Blog" />
 
-            {articles.length === 0 && <h3>No posts to show</h3>}
+            
 
             <div className='py-16'>
                 <div className='container'>
+                    {articles.length === 0 && 
+                        <>
+                            <div className="flex flex-wrap place-items-center my-48">
+                                <div className='container'>
+                                    <h2 className='font-jcHeading2 font-bold text-3xl w-4/5 m-auto'>We're crafting some wonderful content for you. Come back soon to check it out!</h2>
+                                </div>
+                            </div>
+                        </>
+                    }
                     <div className='grid grid-cols-3 gap-4'>
+                        
                         {articles.map(art => (
                                 <BlogPost key={art.id} art={art} />
                         ))}
