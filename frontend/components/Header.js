@@ -3,16 +3,11 @@ import JcLink from '@/components/JcLink'
 import { FaFacebookF, FaTwitter, FaInstagram, FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa'
 import { useState, useEffect, useContext } from 'react'
 import AuthContext from '@/context/AuthContext'
-//import { useTheme } from 'next-themes'
-//import styles from '@/styles/Header.module.css'
 
 export default function Header() {
 	const { user, logout } = useContext(AuthContext)
     const [navbar, setNavbar] = useState(false)
     const [mobileNavOpen, setMobileNavOpen] = useState(false)
-    
-    // SUPPORT FOR DARK MODE ENABLED. CREATE NEW COMPONENT FOR DARKMODE TOGGLE. ADD COMPONENT TO NAV.
-    //const {theme, setTheme} = useTheme()
     
 	const getNavScrollY = () => {
         if(window.scrollY >= 110) {
